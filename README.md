@@ -4,11 +4,13 @@ Use this to convert your raw WhatsApp coversation exports into structured json. 
 
 1. [Fleeing WhatsApp for Telegram / Signal](https://arstechnica.com/tech-policy/2021/01/whatsapp-users-must-share-their-data-with-facebook-or-stop-using-the-app/)
 2. Archiving WhatsApp conversations
-3. Research (what this was originally designed for)
+3. Misinformation research (what this was originally designed for)
 
-## Extra features:
-- **Obfuscation**: If using for research, an --obfuscation-key parameter is available to remove personally identifiable information (PII) from the conversation. So names, phone numbers, and group names will be encrypted.
+#### Extra features:
+- **Obfuscation**: If using for research, an --obfuscation-key parameter is available to remove personally identifiable information (PII) from the conversation. So names, phone numbers, and group names will be obfuscated.
 - **Smart multiple export merges**: Export to the same folder twice without getting duplicate messages
+
+## Usage
 
 
 ### To export your chats
@@ -40,25 +42,23 @@ There are two options for authentication. Both generate a json file which needs 
 
 ### Basic script usage
 
-    ./whatsapp_processor.py path/to/creds.json drive.google.com/folders/drive_id MDY --verbose
+    ./whatsapp_processor.py path/to/creds.json drive.google.com/folders/drive_id mdy --verbose
 
 For help on the CLI arguments, try `./whatsapp_processor.py --help`
 
-### Acknowledgements
+## Acknowledgements
 
 This was adapted from code I wrote for [Tattle](https://tattle.co.in/). Tattle is a civic tech project that builds tools and datasets to better understand and respond to (mis)information trends in India. The original code can be found [here](https://github.com/tattle-made/whatsapp-scraper/tree/master/python_scraper).
 
 
-### License
+## License
 
 [MIT License](https://opensource.org/licenses/MIT)
 
-### Testing
+## Testing
 
     ./test.sh
 
 The test.sh file uses the coverage python module. You can see the code coverage with
 
     firefox htmlcov/index.html
-
-Get off of chrome ya bums.
