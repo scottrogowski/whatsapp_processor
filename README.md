@@ -1,14 +1,15 @@
 ## WhatsApp export processor.
 
-![Demo image](assets/demo.png)
-
 Use this to convert your raw WhatsApp coversation exports into structured json. This works for conversations exported to Google Drive. Use this for:
 
 1. [Fleeing WhatsApp for Telegram / Signal](https://arstechnica.com/tech-policy/2021/01/whatsapp-users-must-share-their-data-with-facebook-or-stop-using-the-app/)
 2. Archiving WhatsApp conversations
 3. Research (what this was originally designed for)
 
-If using for research, an --obfuscation-key parameter is available to remove personally identifiable information (PII) from the conversation. So names, phone numbers, and group names will be encrypted.
+## Extra features:
+- **Obfuscation**: If using for research, an --obfuscation-key parameter is available to remove personally identifiable information (PII) from the conversation. So names, phone numbers, and group names will be encrypted.
+- **Smart multiple export merges**: Export to the same folder twice without getting duplicate messages
+
 
 ### To export your chats
 
